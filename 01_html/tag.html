@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>안녕하세요</h1>
+    <h2>안녕하세요</h2>
+    <h3>안녕하세요</h3>
+    <h4>안녕하세요</h4>
+    <h5>안녕하세요</h5>
+    <h6>안녕하세요</h6>
+
+    <!-- option + shift + 방향키(위아래) : 아래로 복사 하는 단축키 -->
+    <!-- command + / -->
+    <h2>오늘의 일기</h2>
+    <p>오늘은 날씨가 흐리다. <br /> 
+         연말인데 오늘 뭐하시나요? 
+         <br />
+         <br />
+         <br />
+         <br />
+         <br />
+         1/1은 휴일~~~ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 수업 없으니 참고할 것
+        <!-- 띄어쓰기 할 때 쓰는 코드 : $nbsp; -->
+        행복하룜
+    </p>
+
+    <hr />
+    <h4>오늘의 할 일</h4>
+    <!-- disc(디폴트값)), square, circle, none : type의 종류 -->
+    <ul type="none">
+        <li>html 복습하기</li>
+        <li>운동하기</li>
+        <li>점심 맛있게 먹기</li>
+    </ul>
+
+    <h4>카페라떼 만드는 방법</h4>
+    <!-- type 종류 : 1(기본값), a, A, I, i, none -->
+    <!-- 속성 종류 : type, reversed, start  -->
+    <ol type="1" reversed start="2">
+        <li><b>우유</b>를 <strong>컵</strong>에 부은다.</li>
+        <li><i>얼음</i>을 <em>가득</em> 넣는다.</li>
+        <li><del>에스프레소</del> 샷을 넣는다.</li>
+        <li><u>완성!</u></li>
+    </ol>
+
+    <hr />
+    <h4>리스트 안에 리스트 넣기</h4>
+    
+    <ul>
+        <h5>내가 좋아하는 음식</h5>
+        <li>양식</li>
+            <ol type="a">
+                <li>피자</li>
+                <li>파스타</li>
+            </ol>
+        <li>한식</li>
+            <ol>
+                <li>비빔밥</li>
+                <li>삼겹살</li>
+            </ol>
+        <li>일식</li>
+            <ol>
+                <li>라멘</li>
+                <li>초밥
+                    <ul>
+                        <li>새우초밥</li>
+                        <li>연어초밥</li>
+                        <li>계란초밥</li>
+                    </ul>
+                </li>
+            </ol>
+    </ul>
+<!-- <pre><pre/>를 사용하면 띄어쓰기 횟수만큼 그대로 적용됨. 참고! -->
+
+    <details>
+        <summary>제목</summary>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus aperiam fugiat, ex magnam voluptatem placeat dolores, quos exercitationem libero autem quod, eum iusto ipsam? Aliquam non officia labore iusto illum?
+        <!-- lorem. 테스트할 때 많이 사용. 의미없는 문구. 
+        너무 길어서 10단어만 사용하고 싶으면 lorem10 이런식으로 사용하면 됨.-->
+        <Ul>
+            <li>아무태그나</li>
+            <li>넣어도 숨겨짐</li>
+        </Ul>
+    </details>
+    <!-- details, summary는 세트 -->
+
+    <h4>a태그와 img 태그 사용하기</h4>
+    <img src="https://upload.wikimedia.org/wikipedia/ko/thumb/4/4a/신짱구.png/230px-신짱구.png" alt="짱구" width="300" heigh="300"/>
+    <br />
+    <img src="/01_html/jjanggu.png" alt="짱구 사진" width="200"> 
+    <!-- 절대경로 -->
+    <img src="./jjanggu.png" alt="짱구야" width="200">
+    <!-- 내 위치는 ./로 표시. 상대 경로: 현재 위로부터 경로를 찾아나가는 것. (절대 경로보단 상대경로를 사용할 것.)-->
+    <br />
+    <a href="https://www.naver.com" target="_self">네이버로 이동</a>
+    <a href="./html_start.html" target="_blank">html_start로 이동</a>
+    <!-- a태그를 이용하여 내가 만든 html, 기사, 다른 페이지 등으로 이동 가능. 굉장히 많이 쓰임 -->
+
+    <!-- 간단 실습!
+    * 사진을 저장하고, 사진을 눌렀을 때 구글로 이동시키기 -->
+
+    <a href="https://www.google.co.kr/?&hl=ko" target="_blank">
+        <img src="./jjanggu.png" alt="짱구야 놀자">
+    </a>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM 구성 태그🐳</title>
+</head>
+<body>
+        <label>
+            id:<input type="text" placeholder="id를 입력해주세요." />
+        </label>
+        <!-- label고ㅏ input을 한 세트로 묶을 것. -->
+        <br />
+        <label for="pw">
+            password:
+        </label>
+        password: <input type="password" id="pw"/>
+        <br />
+        email: <input type="email" value="allie">
+        <!-- 기입된 내용이 이메일 형식과 같은지 봄. 
+        placeholder와 value의 차이점 : placeholder는 회색 글씨. value는 실제로 값이 입력됨.-->
+        <input type="button" value="로그인"/>
+        <!-- 단지 누르는 것 -->
+        <input type="submit" value="로그인"/>
+        <!-- 제출하기 위한. 어딘가에 제출되기에 새로고침이 되고 있는 것을 알 수  있음. -->
+        <button><span style="color: red;">로</span>그인</button>
+        <!-- 기본적으로 타입이 submit. input의 submit고ㅏ 똑같은데, 다른 점은 스타일 같은 것 적용 가능. -->
+
+        <input type="color">
+        <input type="file">
+        <input type="number">
+        <input type="date">
+        <input type="range">
+        <textarea cols="30" rows="10"></textarea>
+        <!-- input은 한줄만 작성 가능한데, textarea는 여러 줄 
+        30글자, 10줄-->
+        <hr />
+        <h5>다음 중  input의 type이 아닌 것은?(모두 고르시오)</h5>
+        <label>
+            <input type="checkbox">alt
+            
+        </label>
+        <label>
+            <input type="checkbox">text
+            
+        </label>
+        <label>
+            <input type="checkbox">img
+            
+        </label>
+        <label>
+            <input type="checkbox">click
+            
+        </label>
+        <label>
+            <input type="checkbox">date
+            
+        </label>
+
+        <h5>다음 중 img 태그의 속성인 것은?</h5>
+        <input type="radio" name="img" id="alt" checked /><label for="alt">alt</label>
+        <input type="radio" name="img" id="bread"/><label for="bread">bread</label>
+        <input type="radio" name="img" id="href"/><label for="href">href</label>
+        <input type="radio" name="img" id="mouse"/><label for="mouse">mouse</label>
+        <input type="radio" name="img" id="dragon" disabled/><label for="dragon">dragon</label>
+        <!-- 하나의 그룹을 묶어야 하나만 선택 가능하고. 
+        글자를 선택했을 때 선택이 되면 세트가 된 것.  인풋의 아이디와 라벨의 포를 똑같은 걸로 해야 하나의 세트가 됨.
+    한 그룹으로 만들기 위해선 같은 네임을 써야 함.-->
+        <br />
+        <select>
+            <optgroup label="빨간꽃">
+                <option value="장미" disabled>장미</option>
+                <option value="동백꽃">동백꽃</option>
+                <option value="튤립">튤립</option>
+            </optgroup>
+            <!-- 품절이 돼서 선택을 못하게 하고 싶은 경우 disabled 이용 -->
+            <optgroup label="하얀꽃">
+                <option value="벚꽃">벚꽃</option>
+                <option value="매화">매화</option>
+            </optgroup>
+            <!-- option을 그룹화해주는 것 -->
+        </select>
+    
+
+    </form>
+    
+</body>
+</html>
