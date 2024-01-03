@@ -1,0 +1,88 @@
+.d-block{
+    display: block;
+    background-color: aqua;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    padding: 15px;
+    margin: 20px;
+    /* padding : 내부간격? 
+    margin : 테두리와 테두리 사이의 간격.*/
+}
+
+.d-inline{
+    display: inline;
+    background-color: pink;
+    width: 1000px;
+    height: 200px;
+    /* 가로세로는 적용이 안된 걸 알 수 있다. */
+    padding: 15px;
+    /* inline 속성에서 패딩은 안 쓰는 게 좋음 */
+    margin: 20px;
+    /* 양옆 방향으로만 주고, 위아래로는 안 주는 게 좋음. */
+}
+
+.d-inline-block{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: yellowgreen;
+    border: 1px solid blue;
+    padding: 15px;
+    margin: 20px;
+    /* margin은 상쇄되지 않고 합해짐. 즉 40px 만큼 떨어진다. */
+}
+
+.parent{
+    width: 400px;
+    /* 
+    width를 300px로 바꾸면 min클래스는 400px 유지, max는 같이 줄어듦
+    width를 500px로 바꾸면 max클래스는 400px 유지, min은 같이 늘어남.
+     */
+    height: 200px;
+    background-color: red;
+}
+
+.parent>.min{
+    min-width: 400px;
+    /* 400px 이상 */
+    height: 100px;
+    background-color: orange;
+}
+
+.parent>.max{
+    max-width: 400px;
+    /* 400px 이하 */
+    height: 100px;
+    background-color: blueviolet;
+}
+
+.box{
+    background-color: palevioletred;
+    border: 1px solid black;
+}
+
+.box-px{
+    width: 50px;
+    height: 50px;
+}
+
+.box-view{
+    width: 50vw;
+    height: 50vh;
+}
+
+.box-per{
+    width: 50%;
+    height: 50%;
+    /* percent는 부모에 의해 바뀜 */
+}
+
+.rem{
+    font-size: 2rem;
+    /* 1rem = 16px(px의 글씨에 비례함) */
+}
+
+.em{
+    font-size: 2em;
+}

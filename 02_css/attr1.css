@@ -1,0 +1,58 @@
+@import url(font-family: 'Nanum Myeongjo', serif;);
+
+@font-face {
+    font-family: 'YClover-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/YClover-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+.font-link{
+    font-family: 'Diphylleia', serif;
+}
+
+.font-import{
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+.noonnu{
+    font-family: 'YClover-Bold', serif;
+}
+
+.sentences{
+    font-weight: 700;
+    font-size: 16px;
+    /* font-size: 1rem; */
+    /* font-size: 1em; */
+
+     /* text align */
+    text-align: left;
+    text-align: right;
+    text-align: center;
+
+    /* text-decoration */
+    text-decoration: line-through;
+    text-decoration: underline;
+    text-decoration: overline;
+    text-decoration: none;
+
+    /* line-height : 줄간격*/
+    line-height: 32px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    /* 색깔 지정 방법 */
+    /* 
+    1. 색깔 이름 작성: Red, black, pink, ...
+    2. RGB(-,-,-) (- : 0~255)
+    0에 가까울수록 검정, 255에 가까울수록 흰색 
+    3. #------ : 16진수 ex) #c358ab
+    16진수로 이루어진 rgb 값 (0~9와 a,b,c,d,e,f로 이루어진 수)*/
+    color: rgb(0,0,0);
+    color: #ac6767;
+
+    /* 투명도 조절하는 rgba함수 */
+    color: rgba(0,0,0,0.5);
+}
