@@ -30,17 +30,17 @@
         color: blue;
       }
 
-      label:checked{
+      input#red:checked+label{
         background-color: red;
         color: white;
       }
 
-      #yellow:checked{
+      input#yellow:checked+label{
         background-color: yellow;
         color: white;
       }
 
-      #blue:checked{
+      input#blue:checked+label{
         background-color: blue;
         color: white;
       }
@@ -67,6 +67,11 @@
       <input type="checkbox" name="color" id="blue"> 
       <label for="blue">파랑</label>
 
+      <button>제출</button>
+    </form>
+  </body>
+</html>
+
       <!-- label
         - 명시적 방식: id와 for 맞춰주기
         - 암시적 방식: label 내부에 input 쓰기 
@@ -74,7 +79,3 @@
       -->
 
       <!-- checkbox와 textarea 만들기 -->
-      <button>제출</button>
-    </form>
-  </body>
-</html>
