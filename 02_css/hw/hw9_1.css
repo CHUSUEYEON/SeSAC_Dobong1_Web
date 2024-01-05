@@ -1,0 +1,11 @@
+div{
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+
+}
+div:hover {
+    cursor: pointer;
+    /* visibility: hidden; */
+    opacity: 0;
+}

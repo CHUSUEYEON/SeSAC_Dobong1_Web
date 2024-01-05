@@ -1,0 +1,23 @@
+div{
+    width: 800px;
+    height: 500px;
+    background-color: skyblue;
+    border: 1px solid black;
+}
+
+div:nth-child(1){
+    background-image: url(../image/small_img.png);
+    background-position: center;
+    background-repeat: repeat-x;
+}
+div:nth-child(2){
+    background-image: url(../image/small_img.png);
+    background-size: contain;
+    background-position: 100px 30px;
+    background-repeat: no-repeat;
+}
+div:nth-child(3){
+    background-image: url(../image/small_img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}

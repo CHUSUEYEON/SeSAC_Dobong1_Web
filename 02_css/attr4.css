@@ -1,0 +1,46 @@
+.box{
+    display: inline-block;
+    width: 400px;
+    height: 2000px;
+    border: 1px solid black;
+}
+
+.background {
+    background-color: palegreen;
+    background: red;
+    /* background: color image repeat positoin/size;
+    순서만 잘 지키면 한꺼번에 적용 가능 */
+    background: linear-gradient(45deg, black, white, orange);
+    background: linear-gradient(to bottom, black, white, orange);
+    background: linear-gradient(to top, black, white, orange);
+}
+
+.background-image{
+    background-image: url('../image/small_img.png');
+    background-repeat: repeat;
+    /* default */
+    background-repeat: repeat-y;
+    background-repeat: repeat-x;
+    background-repeat: no-repeat;
+    
+    /* background-position */
+    /* center, bottom, left, right, top의 키워드로 지정 가능 */
+    /* background-position: center;
+    background-position: center top;
+    background-position: 100px 200px;
+    background-position: 100px; */
+
+    /* background-size */
+    background-size: 50px;
+    /* 가로축만 50픽셀로 설정. */
+    background-size: 90px 50px;
+    background-size: contain;
+    /* 이미지가 잘리지 않는 한 최대 크기 */
+    background-size: cover;
+    /* 컨테인, 커버 둘 다 원본 비율 유지 */
+    /* 커버는 보통 이미지가 잘림 */
+
+    /* background-attachment */
+    background-attachment: fixed;
+    /* 뷰포트 기준으로 사이즈 조정되기에 화면을 늘리거나 줄일 때 바탕화면 같이 웁믹인다. */
+}

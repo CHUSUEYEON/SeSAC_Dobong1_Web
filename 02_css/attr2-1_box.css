@@ -1,13 +1,11 @@
 .d-block{
     display: block;
-    background-color: aqua;
+    background-color: aquamarine;
     border: 1px solid black;
     width: 100px;
     height: 100px;
     padding: 15px;
     margin: 20px;
-    /* padding : 내부간격? 
-    margin : 테두리와 테두리 사이의 간격.*/
 }
 
 .d-inline{
@@ -15,50 +13,44 @@
     background-color: pink;
     width: 1000px;
     height: 200px;
-    /* 가로세로는 적용이 안된 걸 알 수 있다. */
-    padding: 15px;
-    /* inline 속성에서 패딩은 안 쓰는 게 좋음 */
-    margin: 20px;
-    /* 양옆 방향으로만 주고, 위아래로는 안 주는 게 좋음. */
+    /* padding: 15px;
+    margin: 20px; */
 }
 
 .d-inline-block{
-    display: inline-block;
+    display: inline-block;   
     width: 100px;
     height: 100px;
     background-color: yellowgreen;
     border: 1px solid blue;
     padding: 15px;
     margin: 20px;
-    /* margin은 상쇄되지 않고 합해짐. 즉 40px 만큼 떨어진다. */
 }
 
 .parent{
     width: 400px;
     /* 
-    width를 300px로 바꾸면 min클래스는 400px 유지, max는 같이 줄어듦
-    width를 500px로 바꾸면 max클래스는 400px 유지, min은 같이 늘어남.
-     */
+    width를 300px로 바꾸면 min은 400px 유지, max 는 같이 줄어듦
+    width를 500px로 바꾸면 max는 400px 유지, min 은 같이 늘어남 
+    */
     height: 200px;
     background-color: red;
 }
 
-.parent>.min{
+.parent > .min{
     min-width: 400px;
-    /* 400px 이상 */
     height: 100px;
     background-color: orange;
 }
 
-.parent>.max{
+.parent > .max{
     max-width: 400px;
-    /* 400px 이하 */
     height: 100px;
-    background-color: blueviolet;
+    background-color: rebeccapurple;
 }
 
-.box{
-    background-color: palevioletred;
+.box {
+    background-color: beige;
     border: 1px solid black;
 }
 
@@ -74,13 +66,11 @@
 
 .box-per{
     width: 50%;
-    height: 50%;
-    /* percent는 부모에 의해 바뀜 */
+    /* height: 50%; */
 }
 
 .rem{
     font-size: 2rem;
-    /* 1rem = 16px(px의 글씨에 비례함) */
 }
 
 .em{
@@ -93,13 +83,12 @@
     height: 100px;
     cursor: pointer;
     background-color: blue;
-    /* 마우스가 손가락 모양으로 바뀜 */
 }
 
 .border{
     background-color: yellow;
     /* 단축속성: 굵기 모양 색깔 */
-    /* border: 10px solid red */
+    /* border: 10px solid red; */
     border-color: red orange green blue;
     border-style: dotted;
     border-width: 3px;
@@ -109,8 +98,9 @@
 .rounded{
     background-color: yellowgreen;
     /* border-radius: 50%; */
-    /* radius는 가로세로 길이의 50퍼센트 이상을 쓰면 원이 됨. */
     border-radius: 5px 10px 20px 40px;
+    border-radius: 5px 20px 40px;
+    border-radius: 5px 40px;
 }
 
 .box-sizing{
@@ -127,4 +117,32 @@
     box-sizing: border-box;
 }
 
-.overflow-visible
+.d-none {
+    display: none;
+    background-color: red;
+}
+.invisible {
+  visibility: hidden;
+  background-color: orangered;
+}
+
+.opacity-0 {
+  opacity: 0.5;
+  background-color: tomato;
+}
+
+.overflow-hidden{
+    overflow: hidden;
+}
+
+.overflow-scroll{
+    overflow: scroll;
+}
+
+.overflow-auto{
+    overflow: auto;
+}
+
+.overflow-visible{
+    overflow: visible;
+}

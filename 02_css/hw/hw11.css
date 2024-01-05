@@ -1,0 +1,30 @@
+.container1{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+}
+
+.container2{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+}
+
+.container1 div{
+    width: 100px;
+    height: 100px;
+}
+
+.container1 div:nth-child(1){
+    background-color: red;
+}
+.container1 div:nth-child(2){
+    background-color: yellow;
+    top: 30px;
+    left: 30px;
+}
+.container1 div:nth-child(3){
+    background-color: green;
+    top: 60px;
+    left: 60px;
+}
