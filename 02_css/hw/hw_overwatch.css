@@ -1,0 +1,83 @@
+.background{
+    width: 2000px;
+    height: 1500px;
+    background-image: url(../image/overwatch/bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* background-size: cover; */
+    display: flex;
+}
+
+.hidden{
+    width: 1000px;
+    height: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 20%;
+    left: 29.5%;
+    border: 1px solid black;
+}
+
+.hero{
+    width: 120px;
+    height: 120px;
+    border: 1px solid white;
+    border-radius: 20%;
+    /* background-color: gray; */
+    cursor: pointer;
+    margin: 5px;
+}
+
+.hero1{
+    background-image: url(../image/overwatch/hero1.png);
+}
+.hero2{}
+.hero3{}
+.hero4{}
+.hero5{}
+.hero6{}
+.hero7{}
+.hero8{}
+.hero9{}
+.hero10{}
+.hero11{}
+.hero12{}
+.hero13{}
+.hero14{}
+.hero15{}
+.hero16{}
+.hero17{}
+.hero18{}
+.hero19{}
+.hero10{}
+.hero20{}
+.hero21{}
+.hero22{}
+.hero23{}
+.hero24{}
+.hero25{}
+.hero26{}
+.hero27{}
+.hero28{}
+.hero29{}
+.hero30{}
+.hero31{}
+.hero32{}
+
+.hero:hover{
+    background-color: yellow;
+    width: 120px;
+    height: 120px;
+    margin: 2px;
+}
+
+.logo img{
+    width: 400px;
+    height: 300px;
+    position: fixed;
+    bottom: 20%;
+    left: 50%;
+}
