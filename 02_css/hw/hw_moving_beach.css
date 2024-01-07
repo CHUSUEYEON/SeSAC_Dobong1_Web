@@ -1,0 +1,52 @@
+.background{
+    width: 2000px;
+    height: 1000px;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.beach{
+    width: 400px;
+    height: 250px;
+    margin: -50px;
+}
+
+.beach img{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition-duration: 1s;
+    /* transform: perspective(500px) rotateY(-30deg); */
+    /* transform: rotate(10deg); */
+    transform: skewY(45deg);
+}
+
+.beach img:hover{
+    /* transform: skewY(45deg); */
+    /* transform: scale(1.5); */
+    /* transform: rotate(45deg); */
+    /* transform: perspective(500px) rotateY('45deg'); */
+    transform: perspective(500px) rotateY(0deg);
+    backface-visibility: hidden;
+}
+
+.beach1{
+    z-index: 3;
+}
+.beach2{
+    z-index: 2;
+}
+
+.beach2:hover{
+    z-index: 4;
+}
+
+.beach3{
+    z-index: 1;
+}
+
+.beach3:hover{
+    z-index: 5;
+}

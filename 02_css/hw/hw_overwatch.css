@@ -1,83 +1,221 @@
-.background{
-    width: 2000px;
-    height: 1500px;
-    background-image: url(../image/overwatch/bg.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    /* background-size: cover; */
+.background img{
+    width: 100%;
+    height: 100%;
     display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
+.background{
+    display: flex;
+    justify-content: center;
+     /* background-image: url(../image/overwatch/bg.jpg); */
+    /* background-repeat: no-repeat; */
+    /* background-attachment: fixed; */
+    /* background-size: cover; */
+    /* align-content: center; */
+    /* border: 1px solid black; */
+}
 .hidden{
-    width: 1000px;
-    height: 700px;
+    width: 55%;
+    height: 40%;
     display: flex;
     flex-wrap: wrap;
     align-content: center;
     justify-content: space-evenly;
     position: absolute;
     top: 20%;
-    left: 29.5%;
-    border: 1px solid black;
+    left: 25%;
+    /* border: 1px solid red; */
 }
 
 .hero{
     width: 120px;
     height: 120px;
-    border: 1px solid white;
-    border-radius: 20%;
-    /* background-color: gray; */
+    border: 2px solid white;
+    border-radius: 25px 10px;
+    background-color: gray;
     cursor: pointer;
     margin: 5px;
+    transition-duration: 1s;
+    transform: skewX(-7deg);
+}
+
+.hero:hover{
+    background-color: orange;
+    border: 2px solid white;
+    width: 120px;
+    height: 120px;
+    margin: 2px;
+    transform: scale(1.2) skewX(-7deg);
 }
 
 .hero1{
     background-image: url(../image/overwatch/hero1.png);
+    /* background-position: center; */
+    background-size: cover;
+    background-repeat: no-repeat;
 }
-.hero2{}
-.hero3{}
-.hero4{}
-.hero5{}
-.hero6{}
-.hero7{}
-.hero8{}
-.hero9{}
-.hero10{}
-.hero11{}
-.hero12{}
-.hero13{}
-.hero14{}
-.hero15{}
-.hero16{}
-.hero17{}
-.hero18{}
-.hero19{}
-.hero10{}
-.hero20{}
-.hero21{}
-.hero22{}
-.hero23{}
-.hero24{}
-.hero25{}
-.hero26{}
-.hero27{}
-.hero28{}
-.hero29{}
-.hero30{}
-.hero31{}
-.hero32{}
-
-.hero:hover{
-    background-color: yellow;
-    width: 120px;
-    height: 120px;
-    margin: 2px;
+.hero2{
+    background-image: url(../image/overwatch/hero2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.hero3{
+    background-image: url(../image/overwatch/hero3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.hero4{
+    background-image: url(../image/overwatch/hero4.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.hero5{
+    background-image: url(../image/overwatch/hero5.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.hero6{
+    background-image: url(../image/overwatch/hero6.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.hero7{
+    background-image: url(../image/overwatch/hero7.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.hero8{
+    background-image: url(../image/overwatch/hero8.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.hero9{
+    background-image: url(../image/overwatch/hero9.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.hero10{
+    background-image: url(../image/overwatch/hero10.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.hero11{
+    background-image: url(../image/overwatch/hero11.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.hero12{
+    background-image: url(../image/overwatch/hero12.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.hero13{
+    background-image: url(../image/overwatch/hero13.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.hero14{
+    background-image: url(../image/overwatch/hero14.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.hero15{
+    background-image: url(../image/overwatch/hero15.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.hero16{
+    background-image: url(../image/overwatch/hero16.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.hero17{
+    background-image: url(../image/overwatch/hero17.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.hero18{
+    background-image: url(../image/overwatch/hero18.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.hero19{
+    background-image: url(../image/overwatch/hero19.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.hero20{
+    background-image: url(../image/overwatch/hero20.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.hero21{
+    background-image: url(../image/overwatch/hero21.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.hero22{
+    background-image: url(../image/overwatch/hero22.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.hero23{
+    background-image: url(../image/overwatch/hero23.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.hero24{
+    background-image: url(../image/overwatch/hero24.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.hero25{
+    background-image: url(../image/overwatch/hero25.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.hero26{
+    background-image: url(../image/overwatch/hero26.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.hero27{
+    background-image: url(../image/overwatch/hero27.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.hero28{
+    background-image: url(../image/overwatch/hero28.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.hero29{
+    background-image: url(../image/overwatch/hero29.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.hero30{
+    background-image: url(../image/overwatch/hero30.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.hero31{
+    background-image: url(../image/overwatch/hero31.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.hero32{
+    background-image: url(../image/overwatch/hero32.png);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.logo img{
-    width: 400px;
-    height: 300px;
-    position: fixed;
-    bottom: 20%;
-    left: 50%;
+.logo {
+    width: 300px;
+    height: 250px;
+    position: absolute;
+    bottom: 4%;
+    left: 41.5%;
 }
