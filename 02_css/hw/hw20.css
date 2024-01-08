@@ -1,0 +1,19 @@
+div{
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    /* border: 1px solid black; */
+
+    animation: moving 2s linear;
+}
+
+@keyframes moving{
+    0% {
+        width: 400%;
+        left: 100%;
+    }
+
+    100% {
+        left: 0px;
+    }
+}

@@ -59,3 +59,48 @@
     backface-visibility: visible;
     /* backface-visibility: hidden; */
 }
+
+.box{
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    background-color: aquamarine;
+    /* inline-block 적용시키 이유?  
+    : 수평으로 쌓으려고*/
+}
+
+.box1:hover{
+    background-color: pink;
+    height: 120px;
+    width: 120px;
+
+    transition-duration: 1s;
+    /* transition-delay: 1s; */
+    /* transition-property: height; */
+    /* 위에 세가지 중 하나만 쓰면 됨(배경색, 높이, 너비) 
+    높이만 1초 있다가 자연스럽게 바뀌는 것을 볼 수 있음*/
+    transition-timing-function: linear;
+    /* Linear : 등속개념. 처음부터 끝까지 1초동안 일정한 속도로 변화 */
+}
+
+.box2:hover{
+    /* transition 단축 속성 */
+    /* transition: property duration(필수) function delay */
+    background-color: blueviolet;
+    transform: translateX(100px) scaleX(2);
+
+    /* transition: transform 0.5s linear 2s; */
+    transition: 2s 0.5s;
+    /* = transition: all 2s ease 0.5s */
+    /* transition: 2s 만 있어도 가능 */
+}
+
+.box3:hover{
+    transition: .6s;
+    opacity: 0;
+    /* visibility: hidden; */
+    /* display: none; */
+    /* visibility: hidden/ display: none 은 트랜지션을 걸어놔도 바로 사라진다. 자연스럽게 사라지지 않음
+    적용되는 건 opacity*/
+}
+

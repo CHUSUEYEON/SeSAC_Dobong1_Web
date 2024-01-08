@@ -9,12 +9,14 @@
 .background{
     display: flex;
     justify-content: center;
-     /* background-image: url(../image/overwatch/bg.jpg); */
-    /* background-repeat: no-repeat; */
+     background-image: url(../image/overwatch/bg.jpg);
+    background-repeat: no-repeat;
     /* background-attachment: fixed; */
-    /* background-size: cover; */
+    /* -> 굳이 없어도 됨 */
+
+    background-size: cover;
     /* align-content: center; */
-    /* border: 1px solid black; */
+    border: 1px solid black;
 }
 .hidden{
     width: 55%;
@@ -23,9 +25,13 @@
     flex-wrap: wrap;
     align-content: center;
     justify-content: space-evenly;
-    position: absolute;
+    /* space-evenly를 주기보단 없애고, 마진으로 간격 조정! */
+    /* position: absolute;
     top: 20%;
-    left: 25%;
+    left: 25%; */
+    /* -> 여기에서 지정한 absolute 때문에 (absolute, fixed는 문서의 흐름을 방해함) 백그라운드 이미지가 숨겨져서 안 보인 것. 
+    붕 떠서 붙는다고 생각하면 됨. */
+    /* hidden은 굳이 없어도 되는 존재인듯. 새로 해보기. */
     /* border: 1px solid red; */
 }
 
@@ -215,7 +221,7 @@
 .logo {
     width: 300px;
     height: 250px;
-    position: absolute;
+    /* position: absolute;
     bottom: 4%;
-    left: 41.5%;
+    left: 41.5%; */
 }
