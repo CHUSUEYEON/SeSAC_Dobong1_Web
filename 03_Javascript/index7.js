@@ -35,14 +35,16 @@ console.log(mango.indexOf('x')) // -1
 //slice
 console.log(mango.slice(5)) //mango
 console.log(mango.slice(3,6)) //lem
-console.log(mango.slice(-1)) //뒤에서부터 셈. ㅔ
+console.log(mango.slice(-1)) //뒤에서부터 셈. 
 console.log(mango.slice(-4)) //ango
 //console.log(mango)
 //slice 해도 실제 문자열은 변하지 않음
 
 let msg2 = "wow~ It is so amazing!!!"
 console.log(msg2.replace("wow", "Hey"))
+console.log(msg2.replace('wow','ohhh'))
 console.log(msg2.replaceAll('o','O'))
+console.log(msg2.repeat(4));
 
 let date = '2024.1.10';
 //2024-1-10
@@ -145,6 +147,15 @@ console.log('----forEach')
 arr3.forEach(function(element, index, arr){
     console.log(element, index, arr)
 });
+
+let animals = ['토끼', '호랑이', '사자', '판다'];
+animals.forEach(function(animal, i, arr){
+   console.log(animal, i,  arr);
+})
+
+animals.forEach(function(animal){
+    console.log(animal);
+})
 
 //filter
 //return 이후 조건을 만족하는 요소들을 모아서 "배열"로 반환
