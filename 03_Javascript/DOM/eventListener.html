@@ -51,7 +51,7 @@
             div2.style.backgroundColor  = 'red';
         })
         div2.addEventListener('mouseout', function(){
-            console.log('div2에 mouseout 이벤트 발생!!');2
+            console.log('div2에 mouseout 이벤트 발생!!');
             div2.style.backgroundColor  = 'violet';
         })
 
@@ -59,8 +59,30 @@
         let input = document.querySelector('input');
 
         input.addEventListener('focus', function(){
-            console.log('input에 focus 이벤트 발생')
+            console.log('input에 focus 이벤트 발생');
         })
+
+        //keyboard
+        input.addEventListener('keydown', function(e){
+            console.log('e :', e);
+            console.log('e.target', e.target);
+            console.log('e.target.value', e.target.value);
+            //value 속성을 이용하여 Input에 적은 값을 가져올 수 있다.
+            //e.target까지가 input태그의 요소값을 가져온 것
+            console.log('input에 keydown 이벤트 발생!!');
+        })
+
+        //scroll
+        let container = document.querySelector('.container');
+        // scroll 없을 때는 실행x
+        container.addEventListener('scroll', function(){
+            console.log('container에 scroll 이벤트 발생!!');
+        })
+
+        window.addEventListener('scroll', function(){
+            console.log('container에 scroll 이벤트 발생!!');
+        })
+        
     </script>
 </body>
 </html>

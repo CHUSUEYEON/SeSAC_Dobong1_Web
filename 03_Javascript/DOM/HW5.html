@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>댓글 등록하기</title>
+  </head>
+  <body>
+    <h1>댓글 등록하기</h1>
+    <form>
+      <label for="userid">아이디</label>
+      <input type="text" id="userid" name="userid" />
+      <label for="comment">댓글</label>
+      <input type="text" id="comment" name="comment" />
+      <button type="submit">등록</button>
+    </form>
+    <ul class="comment-list"></ul>
+
+    <script>
+      // TODO: 아래 조건을 만족하도록 js 파일을 수정하기
+      // 문제
+      // - [ ] 아이디 input과 댓글 input을 입력하고 [등록] 버튼을 누르면, 댓글이 추가됩니다.
+      //     - 폼을 "제출"헸을 때에 해당하는 이벤트는 무엇인가요?
+      
+      let button = document.querySelector('button');
+      button.addEventListener('click', function(e){
+        e.preventDefault() //새로고침x
+        let userid = document.getElementById('userid');
+        let comment = document.getElementById('comment');
+        let li = document.createElement('li');
+        let id = userid.value; //얘는 그냥 문자열이기에 id = ''; 이렇게 빈 값을 주어도 초기화가 안 됨. 
+        let c = comment.value; //이런식으로 끊어서 가져오면 그냥 문자열을 가져온 거여서 여기에 맞지 않음. 그냥 값 지정하지 말고 바로 value이용해서 쓰면 될 듯.
+        li.innerHTML = `<strong>${id}</strong> - ${c}` ;
+        let list = document.querySelector('ul');
+        list.append(li);
+      })
+      // - [ ] 아이디 값과 댓글 값을 가져와야 합니다.
+      // - [ ] <li> 태그를 새로 만들고, "아이디 - 댓글내용" 형식이 되도록 설정합니다.
+
+      // - [ ] <ul class="comment-list"> 태그에 li를 추가합니다.
+       
+      // - [ ] 아이디 input과 댓글 input을 초기화해야 합니다.
+    </script>
+  </body>
+</html>
+
+
+<!-- 새로고침이 되는 건 폼태그에서 제출했을 때 일어나는 이벤트. 
+하나의 페이지에서 새로고침이 되는 걸 막음으로써 결과값을 봄 => preventDefault()
+(새로고침이 되면 내용이 없어지기 때문)
+1. click 이벤트 처리 혹은 form 요소 선택해서 submit 이벤트 처리
+input 초기화
+=> userid.value = ''; 
+=> comment.value = ''; 이런식으로 value에 빈 값을 넣으면 초기화 됨.-->
