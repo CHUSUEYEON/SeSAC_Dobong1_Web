@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
+    <title>스케줄</title>
+    <link rel="stylesheet" href="./JQHW3.css">
+</head>
+<body>
+    <div class="container1">
+        날짜 : <input type="text" class="date">
+        내용 : <input type="text" class="content">
+        <button onclick="getValue()">작성</button>
+    </div>
+    <div class="container2">
+        <h2>2022년 7월</h2>
+        <table>
+            <tr>
+                <td class="red">日</td>
+                <td>月</td>
+                <td>火</td>
+                <td>水</td>
+                <td>木</td>
+                <td>金</td>
+                <td class="blue">土</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>1</td>
+                <td class="blue">2</td>
+            </tr>
+            <tr>
+                <td class="red">3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td class="blue">9</td>
+            </tr>
+            <tr>
+                <td class="red">10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+                <td class="blue">16</td>
+            </tr>
+            <tr>
+                <td class="red">17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+                <td>21</td>
+                <td>22</td>
+                <td class="blue">23</td>
+            </tr>
+            <tr>
+                <td class="red">24</td>
+                <td>25</td>
+                <td>26</td>
+                <td>27</td>
+                <td>28</td>
+                <td>29</td>
+                <td class="blue">30</td>
+            </tr>
+            <tr>
+                <td class="red">31</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        
+       let d;
+       $('td').click(function(){
+            d = this;
+            console.log(d);
+            console.log($(d).text());
+            $('.date').val($(d).text());
+        })
+
+        function getValue(){
+            let c = $('.content').val();
+            console.log(c);
+            $(d).append(c);
+        }
+
+        
+        // function setValue(){
+        //     //input 태그의 value값 설정
+        //     $('input').val('setting');
+        // }
+        // function getValue(){
+        //     //input 태그의 value값(텍스트창 안에 들어있는 값) 가져오기
+        //     alert($('input').val());
+        // }
+    </script>
+</body>
+</html>

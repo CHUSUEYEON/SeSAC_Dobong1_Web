@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            border: 1px solid red;
+            border-radius: 10px;
+            width: 100px;
+            height: 100px;
+        }
+
+        @media screen and (min-width: 700px){
+            div {
+                display: inline-block;
+                background-color: black;
+            }
+        }
+
+        @media screen and (max-width: 700px) {
+            div {
+                background-color: skyblue;
+                margin: 10px;
+            }            
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+</html>

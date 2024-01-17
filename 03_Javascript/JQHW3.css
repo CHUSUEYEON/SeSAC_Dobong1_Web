@@ -1,0 +1,45 @@
+body {
+    display: flex;
+}
+
+.container1 {
+    width: 230px;
+    display: inline-block;
+    margin: 10px, 1px;
+    position: relative;
+    left: 50px;
+    top: 50px;
+}
+
+input {
+    margin: 5%;
+}
+
+.container2 {
+    position: relative;
+    left: 100px;
+    top: 60px;
+}
+
+table{
+    /* border: 1px solid black; */
+    width: 600px;
+    height: 600px;
+}
+
+h2 {
+    color: green;
+    text-align: center;
+}
+
+.red {
+    color: red;    
+}
+
+.blue {
+    color: blue;
+}
+
+td:hover{
+    cursor: pointer;
+}
