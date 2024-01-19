@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>MyBootstrap</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .cardContainer{
+          display: flex;
+          justify-content: space-evenly;
+          margin: 10px;
+        }
+
+        .card-text {
+          font-size: 9px;
+        }
+
+        .btn {
+          width: 80px;
+          height: 25px;
+          font-size: 12px;
+          line-height: 50%;
+          position: absolute;
+          bottom: 10px;
+        }
+
+        .card {
+          width: 10rem;
+          height: 15rem;
+        }
+
+        .mb-3{
+          margin-top: 10px;
+          font-size: 10px;
+          width: 100%;
+          height: 4rem;
+        }
+
+        .emailContainer{
+          display: flex;
+          justify-content: center;
+          /* flex-direction: column; */
+          /* align-content: center; */
+          /* width: 50%; */
+          /* height: 100px; */
+          /* border: 1px solid black; */
+          position: relative;
+          /* left: 25%; */
+        }
+
+        .form-label {
+          font-size: 10px;
+          margin: 3px;
+        }
+
+        .form-control {
+          font-size: 10px;
+        }
+
+        .mb-1{
+          margin: 3px;
+        }
+
+        #exampleFormControlInput1 {
+          height: 20px; 
+        }
+
+        .submit {
+          font-size: 8px; 
+          width: 40px; 
+          height: 15px; 
+          margin: 3px;
+          position: relative;
+          top: 60px;
+        }
+
+        .listen {
+          background-color: rgba(225, 229, 240, 0.97);
+          text-decoration: underline;
+          position: relative;
+          top: 5px;
+          left: 30px;
+        }
+
+        .card-body {
+          /* width: 400px; */
+          /* height: 95px; */
+        }
+
+        .card-head {
+          /* width: 400px; */
+          /* height: 35px; */
+        }
+    </style>
+</head>
+<body>
+    <div class="p-3 mb-2 bg-primary-subtle text-emphasis-primary" style="font-weight: 800;">
+      <i class="bi bi-airplane"></i>
+      Where do you want to go?
+    </div>
+    <div class="container">
+        <div id="carouselExampleIndicators" class="carousel slide" style="width: 15rem;">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./grandcayon.jpeg" class="d-block w-100" alt="Grandcayon">
+              </div>
+              <div class="carousel-item">
+                <img src="./auroa.jpeg" class="d-block w-100" alt="Aurora">
+              </div>
+              <div class="carousel-item">
+                <img src="./Uyuni.jpeg" class="d-block w-100" alt="Uyuni">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <span class="placeholder col-12 bg-primary" style="margin: 10px 0;"></span>
+
+    <div class="card" style="width: 70%; height: 15%; position: relative; left: 80px;">
+      <div class="card-header" style="width: 100%; height: 35px; line-height: 103%;">
+        Quote
+      </div>
+      <div class="card-body" style="width: 100%; height: 95px;">
+        <blockquote class="blockquote mb-0">
+          <p style="font-style: italic; font-size: 15px;">Travels makes one modest. <br />You see what a tiny place you occupt in the world.</p>
+          <footer class="blockquote-footer">Gustav Flaubert</footer>
+        </blockquote>
+      </div>
+    </div>
+    <span class="listen">Listen to our special story.</span>
+
+    <div class="cardContainer">
+      <div class="card" style="width: 8rem; height: 15rem;">
+        <img src="./grandcayon.jpeg" class="card-img-top" alt="grandcayon" >
+          <div class="card-body">
+            <h6 class="card-title">Grandcayon</h6>
+            <p class="card-text">You can enjoy one of the great nature of the world in Las Vegas.</p>
+            <a href="#" class="btn btn-secondary">Let's go</a>
+          </div>
+      </div>
+      <div class="card" style="width: 8rem;">
+         <img src="./auroa.jpeg" class="card-img-top" alt="auroa">
+          <div class="card-body">
+            <h6 class="card-title">Aurora</h6>
+            <p class="card-text">You can dream whatever you want.</p>
+            <a href="#" class="btn btn-secondary">Let's go</a>
+          </div>
+      </div>
+      <div class="card" style="width: 8rem;">
+        <img src="./Uyuni.jpeg" class="card-img-top" alt="Uyuni">
+        <div class="card-body">
+          <h6 class="card-title">Salar de Uyuni</h6>
+          <p class="card-text">You will experience that you've never done before here.</p>
+          <a href="#" class="btn btn-secondary">Let's go</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="emailContainer">
+      <div class="mb-1">
+        <label for="exampleFormControlInput1" class="form-label" style="font-size: 10px;">Email address</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+      </div>
+      <div class="mb-1">
+        <label for="exampleFormControlTextarea1" class="form-label" style="font-size: 10px;">Please, write your story</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" style="width: 250px; color: grey; font-size: 8px;">I've been to Santorini...</textarea>
+      </div>
+      <button class="submit" type="submit">submit</button>
+    </div>
+</body>
+</html>
