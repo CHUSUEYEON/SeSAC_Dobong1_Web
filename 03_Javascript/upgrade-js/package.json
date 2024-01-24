@@ -1,0 +1,4 @@
+{
+    "type": "module",
+    "___comment____":"ES6 모듈로 진행할 때는 type: module 명시(주석임)"
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>callback 지옥 경험하기</title>
+    <style>
+      body {
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>배경색이 1초에 한 번씩 변경됩니다.</h1>
+    <script>
+      // red, orange, yellow, green, blue
+      //   setTimeout(() => {
+      //     document.body.style.backgroundColor = "red";
+      //     setTimeout(() => {
+      //       document.body.style.backgroundColor = "orange";
+      //       setTimeout(() => {
+      //         document.body.style.backgroundColor = "yellow";
+      //         setTimeout(() => {
+      //           document.body.style.backgroundColor = "green";
+      //           setTimeout(() => {
+      //             document.body.style.backgroundColor = "blue";
+      //           }, 1000);
+      //         }, 1000);
+      //       }, 1000);
+      //     }, 1000);
+      //   }, 1000);
+
+      function red(color) {
+        return new Promise((res, rej) => {
+          setTimeout(() => {
+            res((document.body.style.backgroundColor = color));
+          }, 1000);
+        });
+      }
+
+      // red()
+      //   .then(() => red("red"))
+      //   .then(() => red("orange"))
+      //   .then(() => red("yellow"))
+      //   .then(() => red("green"))
+      //   .then(() => red("blue"));
+
+      async function change() {
+        await red("red");
+        await red("orange");
+        await red("yellow");
+        await red("green");
+        await red("blue");
+      }
+
+      change();
+    </script>
+  </body>
+</html>
