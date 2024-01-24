@@ -27,8 +27,12 @@ app.get("/register", (req, res) => {
 });
 
 app.get("/login", (req, res) => {
-  res.render("login");
+  res.render("login.ejs");
 });
+
+// app.post('/login',(req,res)=>{
+//   req.body
+// })
 
 //page not found, 404 페이지는 라우팅 과정 중 맨 마지막에 설정
 app.get("*", (req, res) => {
