@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습문제1(form의 get요청)</title>
+  </head>
+  <body>
+    <h2>get 요청</h2>
+    <form action="/practice" method="get">
+      <label for="name">
+        이름 <input type="text" id="name" name="name" />
+      </label>
+      <br />
+      <fieldset>
+        <legend>성별</legend>
+        <label for="male">
+          남자 <input type="radio" id="male" name="gender" value="남자" />
+        </label>
+        <label for="female">
+          여자 <input type="radio" id="female" name="gender" value="여자" />
+        </label>
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>생년월일</legend>
+        <select name="year" id="year">
+          <%for(let i =1985; i < 2003; i++){%>
+          <option value="<%=i%>"><%=i%></option>
+          <%}%>
+        </select>
+        <span>년</span>
+        <select name="month" id="month">
+          <%for(let i =1; i < 13; i++){%>
+          <option value="<%=i%>"><%=i%></option>
+          <%}%>
+        </select>
+        <span>월</span>
+        <select name="date" id="date">
+          <%for(let i =1; i < 32; i++){%>
+          <option value="<%=i%>"><%=i%></option>
+          <%}%>
+        </select>
+        <span>일</span>
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>관심사</legend>
+        <label for="trip"
+          ><input type="checkbox" value="trip" name="favorite" />여행</label
+        >
+        <label for="fashion"
+          ><input type="checkbox" value="fashion" name="favorite" />패션</label
+        >
+        <label for="food"
+          ><input type="checkbox" value="food" name="favorite" />음식</label
+        >
+      </fieldset>
+      <button>회원가입</button>
+    </form>
+  </body>
+</html>
