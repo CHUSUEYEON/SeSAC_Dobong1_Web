@@ -155,7 +155,7 @@
             console.log(res.data.title);
             console.log(res.data.fileInfo);
             console.log(res.data.fileInfo.path);
-            img.src = res.data.fileInfo.path;
+            img.src = "/" + res.data.fileInfo.path;
             resultTitle.innerText = res.data.title.dynamicTitle;
           })
           .catch((err) => {
