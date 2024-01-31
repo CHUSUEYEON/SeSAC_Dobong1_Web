@@ -58,15 +58,14 @@
         >
       </fieldset>
       <button type="button" onclick="axiosGet()">회원가입</button>
-
-      <div class="result"></div>
     </form>
+    <div class="result"></div>
 
     <script>
       const resultBox = document.querySelector(".result");
       async function axiosGet() {
         const form = document.forms["register"];
-        // const favorite = [trip, food, fashion];
+        // const favorite = [trip, food, fashion]; 관심사 새로운 배열로 만들기
         const favs = [];
         form.favorite.forEach((formEl) => {
           if (formEl.checked) {
@@ -82,6 +81,24 @@
           date: form.date.value,
           favorite: favs,
         };
+
+        //axios - then, catch로
+        /* function axiosGet(){
+          axios({
+            method: 'GET',
+            url: '/axios-pratice1', //렌더랑 샌드는 동시에 보낼 수 없기에 따로 보내야 함.
+            params: data, //params가 app.js에서 query로 가고, req.qeury를 보내는 값이  
+          }).then(function(res){
+            console.log(res);
+            console.log(res.data);
+
+            const { name, gender,year, month, date, fav} = res.data
+
+            result.innerText=`${}님, 환영합니다.`
+          }).catch((err)=>{
+            console.log(err)
+          })
+        } */
 
         try {
           const response = await axios({
