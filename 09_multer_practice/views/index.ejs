@@ -9,11 +9,12 @@
   <body>
     <form action="/upload" method="post" enctype="multipart/form-data">
       아이디 <input type="text" name="id" id="id" /><br />
-      비밀번호 <input type="text" name="pw" id="pw" /><br />
+      비밀번호 <input type="password" name="pw" id="pw" /><br />
       이름 <input type="text" name="name" id="name" /><br />
-      나이 <input type="text" name="age" id="age" /><br />
+      나이 <input type="number" name="age" id="age" /><br />
       프로필사진 <input type="file" name="profile" id="profile" /><br />
       <button type="reset">리셋</button><br />
+      <!-- <button onclick="reset()">리셋</button> 이 방법으로도 리셋할 수 있음. -->
       <button type="submit">회원가입</button>
     </form>
 
