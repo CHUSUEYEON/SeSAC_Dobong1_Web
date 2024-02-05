@@ -45,3 +45,5 @@ SELECT * FROM user ORDER BY age DESC LIMIT 3;
 SELECT * FROM user WHERE age BETWEEN 25 and 50;
 UPDATE user SET pw = '12345678' WHERE id = 'hong1234';
 DELETE FROM user WHERE id = 'jungkrat';
+
+-- SELECT >> FROM >> WHERE >> GROUP BY >> having >> ORDER BY >> LIMIT
