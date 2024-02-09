@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MVC 실습1</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <form name="register">
+      <div>아이디 <input type="text" name="id" id="id" /></div>
+      <div>비밀번호 <input type="password" name="pw" id="pw" /></div>
+      <br />
+      <button type="button" ondblclick="postAxios()">로그인 1</button>
+      <button type="button">로그인 2</button>
+      <div id="result"></div>
+    </form>
+    <script>
+      const resultBox = document.getElementById("result");
+      async function postAxios() {
+        const form = document.forms["register"];
+        const data = {
+          id: form.id.value,
+          pw: Number(form.pw.value),
+        };
+        console.log(data);
+        try {
+          const response = await axios({
+            method: "POST",
+            url: "/axios",
+            data: data,
+          });
+          //   console.log(response);
+          console.log(response.data);
+          const { id: 아이디, pw: 비밀번호 } = response.data;
+          console.log(response.data.isUser);
+          if (response.data.isUser) {
+            resultBox.innerHTML =
+              "<p style=color:red> 아이디 또는 패스워드 오류😦</p>";
+          } else {
+          }
+        } catch (err) {
+          console.error("err:", err);
+        }
+      }
+    </script>
+  </body>
+</html>
