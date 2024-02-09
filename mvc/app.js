@@ -14,7 +14,7 @@ const indexRouter = require("./routes"); //index.js면 생략 가능
 //indexRouter에서 처리
 app.use("/", indexRouter);
 
-//localhost:8080/ 경로를 기본으로 하는 경로는
+//localhost:8080/user 경로를 기본으로 하는 경로는
 //userRouter에서 처리
 const userRouter = require("./routes/user");
 app.use("/user", userRouter);
