@@ -7,15 +7,13 @@ exports.main = (req, res) => {
 exports.axios = (req, res) => {
   console.log(req.body);
   //   console.log(User.usersInfo());
-  if (
-    req.body.id !== User.usersInfo().id &&
-    req.body.pw !== User.usersInfo().pw
-  ) {
+  const { id: clientId, pw: clientPw } = req.body;
+  if (clientId === User.usersInfo().id && clientPw === User.usersInfo().pw) {
     res.send({
       usersInfo: req.body,
-      isUser: false,
+      isUser: true,
     });
   } else {
-    res.send("connect!!!");
+    res.send({ isUser: false });
   }
 };

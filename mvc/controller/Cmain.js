@@ -34,9 +34,9 @@ exports.comment = (req, res) => {
   //한번에 처리
   if (!Comment.commentsInfo()[commentId - 1]) {
     return res.render("404");
+  } else {
+    res.render("comment", {
+      commentInfo: Comment.commentsInfo()[commentId - 1],
+    });
   }
-
-  res.render("comment", {
-    commentInfo: Comment.commentsInfo()[commentId - 1],
-  });
 };

@@ -33,11 +33,12 @@
           //   console.log(response);
           console.log(response.data);
           const { id: 아이디, pw: 비밀번호 } = response.data;
-          console.log(response.data.isUser);
+          // console.log(response.data.isUser);
           if (response.data.isUser) {
+            resultBox.innerHTML = "<p> 로그인 성공 </P>";
+          } else {
             resultBox.innerHTML =
               "<p style=color:red> 아이디 또는 패스워드 오류😦</p>";
-          } else {
           }
         } catch (err) {
           console.error("err:", err);
