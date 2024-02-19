@@ -28,7 +28,8 @@ const Visitor = function (Sequelize, DataTypes) {
     {
       tableName: "visitor",
       timestamps: false,
-      freezeTableName: true,
+      freezeTableName: true, // 테이블명을 단수로 쓰면 자동적으로 복수형으로 바뀜. 이것을 방지하는 것이 freezeTableName!
+      // true로 하면 복수형으로 안 바뀌고 내가 설정한 이름 그대로 됨.
     }
   );
 
