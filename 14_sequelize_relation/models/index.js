@@ -1,7 +1,12 @@
 "use strict";
 
 const Sequelize = require("sequelize");
-const config = require(__dirname + "/../config/config.json")["development"];
+// const config = require(__dirname + "/../config/config.json")["development"];
+
+// env 사용할 때는 js 파일과 같이 사용
+const config = require(__dirname + "/../config/config.js")["development"];
+
+console.log("config", config);
 //config에 있는 development 라는 객체[]를 가져오기 위해.
 const db = {};
 
