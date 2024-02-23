@@ -25,8 +25,6 @@ app.get("/login", (req, res) => {
 app.post("/login", (req, res) => {
   try {
     console.log(req.body);
-    // res.send("서버 콘솔 확인");
-
     const { id, pw } = req.body;
     const { id: realId, pw: realPw } = userInfo;
     if (id === realId && pw === realPw) {
@@ -45,7 +43,38 @@ app.post("/login", (req, res) => {
 });
 
 // token 정보 확인
-app.post("/token", (req, res) => {});
+app.post("/token", (req, res) => {
+  try {
+    console.log(req.headers.authorization);
+    if (req.headers.authorization) {
+      // 인증정보 들어왔을 때
+      // token만을 저장하기 위해서
+      const token = req.headers.authorization.split(" ")[1];
+      try {
+        console.log("token :::", token);
+
+        const auth = jwt.verify(token, SECRET);
+        console.log("auth :::", auth);
+        //verify의 리턴값 { id: 'cocoa', iat: 1708656037 }
+        // iat: issued at, 발급된 시간 -> 토큰이 만든지 얼마나 됐는지 판단할 수 있음.
+        if (userInfo.id === auth.id) {
+          res.send({ result: true, name: userInfo.name });
+        }
+        res.end();
+      } catch (err) {
+        // 잘못된 정보 들어왔을 때
+        console.log("토큰 인증 에러", err);
+        res.send({ resul: false, message: "인증된 회원이 아닙니다." });
+      }
+    } else {
+      // 인증정보 안 들어왔을 때
+      res.redirect("/login");
+    }
+  } catch (err) {
+    console.log("POST /token", err);
+    res.status(500).send("server error");
+  }
+});
 
 app.listen(PORT, () => {
   console.log(`http://localhost:${PORT}`);
