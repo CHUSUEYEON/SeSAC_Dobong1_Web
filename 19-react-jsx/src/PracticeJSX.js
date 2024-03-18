@@ -14,7 +14,7 @@ export default function AnimalName() {
           {name}는 {animal}입니다.
         </span>
       </div>
-      <div>{3 + 5 == 8 ? "정답입니다!" : "오답입니다!"}</div>
+      <div>{3 + 5 === 8 ? "정답입니다!" : "오답입니다!"}</div>
       <div>{a > b && "a가 b보다 큽니다."}</div>
       <br />
       <br />
