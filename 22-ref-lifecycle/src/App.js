@@ -1,5 +1,6 @@
 // import logo from './logo.svg';
 import "./App.css";
+import "./post.css";
 import Container from "./components/Container";
 import PostList from "./components/PostList";
 // import LifeCycleClass from "./components/LifeCycleClass";
