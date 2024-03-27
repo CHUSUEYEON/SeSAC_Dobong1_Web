@@ -10,13 +10,6 @@ const MyLink = styled(Link)`
   text-decoration: none;
   color: black;
 `;
-const header = styled(Header)`
-  background-color: rgb(232, 212, 243);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 80px;
-`;
 
 function App() {
   return (
