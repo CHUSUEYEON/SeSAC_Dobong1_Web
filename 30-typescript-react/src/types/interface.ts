@@ -9,3 +9,10 @@ export interface GTodo<T> {
   text: T;
   done: boolean;
 }
+
+export interface MatzipForm {
+  imgSrc: string;
+  title: string;
+  desc: string;
+  idx: number;
+}
