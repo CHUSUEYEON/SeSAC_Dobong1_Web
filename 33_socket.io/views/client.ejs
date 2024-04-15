@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>socket.io로 채팅만들기</title>
+    <script src="/socket.io/socket.io.js"></script>
+  </head>
+  <body>
+    <ul></ul>
+    <form id="chat">
+      <input type="text" id="user" placeholder="이름" />
+      <input type="text" id="message" placeholder="메시지" />
+      <button>채팅 보내기</button>
+    </form>
+    <script>
+      const socket = io(); //soclet.io 연결 설정 : io()함수가 클라이언트의 소켓 생성 및 연결을 설정함
+      /*
+          1. emit에서 on으로 같은 이벤트 이름을 가진 곳으로 인자 전달
+          2. on의 콜백에서 전달된 인자를 받아준다.
+          3. on의 콜백의 cb로 emit에게 값을 전달한다.
+          4. emit에서는 마지막 매개변수인 콜백의 인자에 on이 전달한 값이 있다.
+          */
+
+      //   socket.emit("event_name", "hello", 10, { name: "allie" }, (res) => {
+      //     console.log(res);
+      //   }); //3개의 인자를 보내는 중 :Hello, 10, {} (함수, 객체 등 다양한 데이터 타입 보낼 수 있음)
+
+      const chatForm = document.querySelector("#chat");
+      const ul = document.querySelector("ul");
+
+      chatForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const user = document.querySelector("#user");
+        const message = document.querySelector("#message");
+
+        const data = {
+          name: user.value,
+          message: message.value,
+        };
+
+        socket.emit("new_message", data, (res) => {
+          const li = document.createElement("li");
+          console.log(res); //{name: "chu", message: "hi"}
+          li.innerText = `${res.name}:${res.message}`;
+          ul.append(li);
+        });
+      });
+
+      socket.on("message_render", (message) => {
+        const li = document.createElement("li");
+        li.innerText = `${message.name}: ${message.message}`;
+        ul.append(li);
+      });
+    </script>
+  </body>
+</html>

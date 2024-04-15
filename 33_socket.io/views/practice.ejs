@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice</title>
+    <script src="/socket.io/socket.io.js"></script>
+  </head>
+  <body>
+    <h1>Hello World</h1>
+
+    <button id="btn1">Hello</button>
+    <button id="btn2">study</button>
+    <button id="btn3">bye</button>
+    <br />
+    <div id="text"></div>
+  </body>
+  <script>
+    const socket = io();
+
+    const btn1 = document.getElementById("btn1");
+    const btn2 = document.getElementById("btn2");
+    const btn3 = document.getElementById("btn3");
+    const text = document.getElementById("text");
+
+    function btnClick1() {
+      socket.emit("btn", btn1.innerText, (res) => {
+        console.log(res);
+      });
+    }
+    function btnClick2() {
+      socket.emit("btn", btn2.innerText, (res) => {
+        console.log(res);
+      });
+    }
+    function btnClick3() {
+      socket.emit("btn", btn3.innerText, (res) => {
+        console.log(res);
+      });
+    }
+
+    btn1.addEventListener("click", btnClick1);
+    btn2.addEventListener("click", btnClick2);
+    btn3.addEventListener("click", btnClick3);
+
+    socket.on("msg_back", (msg) => {
+      if (msg == "Hello") {
+        console.log("안녕하세요.");
+        text.innerText = `${msg} : 안녕하세요.`;
+      } else if (msg == "study") {
+        console.log("공부합시다!");
+        text.innerText = `${msg} : 공부합시다!`;
+      } else {
+        console.log("잘가요~");
+        text.innerText = `${msg} : 잘가요~`;
+      }
+    });
+  </script>
+</html>

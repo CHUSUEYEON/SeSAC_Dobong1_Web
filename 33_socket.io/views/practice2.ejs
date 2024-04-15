@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습 2</title>
+    <script src="/socket.io/socket.io.js"></script>
+  </head>
+  <body>
+    <div>
+      <ul id="chat"></ul>
+    </div>
+    <form id="chatForm">
+      <input type="text" id="msg" />
+      <button>전송</button>
+      <!-- <button onclick="send()">전송</button> -->
+    </form>
+    <script>
+      const socket = io();
+
+      const chatForm = document.getElementById("chatForm");
+      const ul = document.getElementById("chat");
+
+      chatForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const msg = chatForm.querySelector("input");
+
+        // const data = {
+        //   chat: msg.value,
+        // };
+
+        socket.emit("send", msg.value);
+      });
+      socket.on("chatting_back", (res) => {
+        console.log(res);
+      });
+
+      // function send() {
+      //   chatForm.addEventListener("submit", (e) => {
+      //     e.defaultPrevented();
+      //   });
+      //   // e.defaultPrevented();
+      //   const chat = document.querySelector("#msg");
+      //   const data = {
+      //     chat: chat.value,
+      //   };
+      //   socket.emit("send", data, (res) => {
+      //     console.log(res);
+      //   });
+      // }
+    </script>
+  </body>
+</html>
