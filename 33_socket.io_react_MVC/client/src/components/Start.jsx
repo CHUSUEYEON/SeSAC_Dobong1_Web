@@ -6,7 +6,7 @@ const socket = io.connect("http://localhost:8080", {
 });
 export default function Start() {
   const initSocketConnect = () => {
-    console.log(socket.connected);
+    // console.log(socket.connected);
     if (!socket.connected) socket.connect(); //클라이언트 소켓에 접속
     // console.log("after connect", socket.connected);
   };
