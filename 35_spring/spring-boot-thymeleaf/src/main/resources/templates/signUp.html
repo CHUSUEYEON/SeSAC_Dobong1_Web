@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</head>
+<body>
+    <form action="/restapi/signUp" method="post" id="prac_form">
+        <fieldset>
+          이름: <input name="name" type="text"/>
+          <br>
+          성별:
+          <input name="gender" type="radio" value="남자" id="man">
+            <label for="man">남자</label>
+          </input>
+          <input name="gender" type="radio" value="여자" id="woman">
+            <label for="woman">여자</label>
+          </input>
+          <br>
+          <select name="year" id="year" >
+            <option th:each="year:${years}" th:value="${year}" th:text="${year}"></option>
+          </select>년
+          <select name="month" id="month">
+            <option th:each="month:${months}" th:value="${month}" th:text="${month}"></option>
+          </select>월
+          <select name="date" id="date">
+            <option th:each="date:${dates}" th:value="${date}" th:text="${date}"></option>
+          </select>일
+          <br>
+
+          관심사:
+          <input name="hobby" type="checkbox" id="trip" value="여행"> <label for="trip">여행</label></input>
+          <input name="hobby" type="checkbox" id="fashion" value="패션"><label for="fashion">패션</label></input>
+           <br>
+          <button type="button" onclick="register()">회원가입</button>
+        </fieldset>
+      </form>
+
+      <script>
+        function register(){
+        const form = document.getElementById("prac_form")
+        const data={
+          name : form.name.value,
+          gender : form.name.value,
+          year : form.name.value,
+          month : form.name.value,
+          date : form.name.value,
+          hobby : form.name.value,
+        }
+        axios.post("/signUp", data).then((res)=>console.log(res.data))
+        }
+      </script>
+</body>
+</html>

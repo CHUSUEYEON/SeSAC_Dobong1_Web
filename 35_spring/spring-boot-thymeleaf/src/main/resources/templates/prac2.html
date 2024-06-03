@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <table style="border:1px solid black">
+    <tr style="border:1px solid black">
+      <th style="border:1px solid black">이름</th>
+      <th style="border:1px solid black">나이</th>
+    </tr>
+    <tr th:each="persons:${person}" style="border:1px solid black">
+      <td th:text="${persons.getName()}" style="border:1px solid black"></td>
+      <td th:text="${persons.age}" style="border:1px solid black"></td>
+    </tr>
+  </table>
+</body>
+</html>

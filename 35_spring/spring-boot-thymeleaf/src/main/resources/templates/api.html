@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--  Axios CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <h3>Get 전송</h3>
+  <form action="/api/res1" method="get">
+    이름: <input name="name" type="text"/>
+    <br>
+    나이: <input name="age" type="number"/>
+    <button type="submit">전송</button>
+  </form>
+  <br>
+  <a href="/api/res2/lily">/api/res2/lily</a>
+  <a href="/api/res2/lily/88">/api/res2/lily/88</a>
+  <br>
+  <h3>Post 전송</h3>
+  <form action="/api/res3/abcd" method="post">
+    이름: <input name="name" type="text"/>
+    <br>
+    나이: <input name="age" type="number"/>
+    <button type="submit">전송</button>
+  </form>
+
+  <h3>Post 전송(DTO 객체)</h3>
+  <form action="/api/res5" method="post">
+    이름: <input name="name" type="text"/>
+    <br>
+    나이: <input name="age" type="number"/>
+    <button type="submit">전송</button>
+  </form>
+
+  <h3>Post 전송(VO 객체)</h3>
+  <form action="/api/res6" method="post">
+    이름: <input name="name" type="text"/>
+    <br>
+    나이: <input name="age" type="number"/>
+    <button type="submit">전송</button>
+  </form>
+
+  <h3>Get 전송(DTO 객체)</h3>
+  <form action="/api/res7" method="get">
+    이름: <input name="name" type="text"/>
+    <br>
+    나이: <input name="age" type="number"/>
+    <button type="submit">전송</button>
+  </form>
+
+  <h3>Get 전송(DTO 객체, @RequestBody)</h3>
+  <form action="/api/res8" method="get">
+    이름: <input name="name" type="text"/>
+    <br>
+    나이: <input name="age" type="number"/>
+    <button type="submit">전송</button>
+  </form>
+
+  <h3>Post 전송(DTO 객체, @RequestBody)</h3>
+  <form action="/api/res9" method="post">
+    이름: <input name="name" type="text"/>
+    <br>
+    나이: <input name="age" type="number"/>
+    <button type="submit">전송</button>
+  </form>
+
+  <!--  Get 은 어차피 오류라서 안 함.-->
+  <h3>post 동적 폼 전송(DTO 객체, @RequestBody)</h3>
+  <form action="/api/res10" method="post" id="form_res10">
+    이름: <input name="name" type="text"/>
+    <br>
+    나이: <input name="age" type="number"/>
+    <button type="button" onclick="postRes10()">전송</button>
+  </form>
+
+  <h3>post 동적 폼 전송(VO 객체, @RequestBody)</h3>
+  <form action="/api/res11" method="post" id="form_res11">
+    이름: <input name="name" type="text"/>
+    <br>
+    나이: <input name="age" type="number"/>
+    <button type="button" onclick="postRes11()">전송</button>
+  </form>
+
+  <h3>prac</h3>
+  <form action="/api/res12" method="get" id="form_res12">
+    이름: <input name="name" type="text"/>
+    <br>
+    나이: <input name="age" type="number"/>
+    <button type="button" onclick="prac()">전송</button>
+  </form>
+
+  <script>
+    function postRes10(){
+    const form = document.getElementById("form_res10");
+    const data = {
+      name: form.name.value,
+      age: form.age.value,
+      }
+    axios.post("/api/res10", data).then((res) => console.log(res.data))
+    }
+
+      function postRes11(){
+    const form = document.getElementById("form_res11");
+    const data = {
+      name: form.name.value,
+      age: form.age.value,
+      }
+    axios.post("/api/res11", data).then((res) => console.log(res.data))
+    }
+
+
+       function prac(){
+    const form = document.getElementById("form_res12");
+    const data = {
+      name: form.name.value,
+      age: form.age.value,
+      }
+    axios.get("/api/res12", data).then((res) => console.log(res.data))
+    }
+  </script>
+
+</body>
+</html>
